@@ -1,0 +1,8 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+PACKAGE Common IS
+
+    TYPE OledMem IS ARRAY(0 TO 3, 0 TO 15) OF std_logic_vector(7 DOWNTO 0);
+    
+END PACKAGE Common;
