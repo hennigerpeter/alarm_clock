@@ -22,12 +22,32 @@ BEGIN
         v_bcd1 := "0000";
         v_number := to_unsigned(i_number, v_number'length);
 
-        FOR i IN ? TO ? LOOP
+        -- Nur einen Durchlauf machen, da v_bcd0 und v_bcd1 nicht per Loop durchlaufen werden können
+        FOR i IN 0 TO 1 LOOP
             --TODO: Pseudocode umsetzen
+
+            -- Zahl groeßer 4, addiere 3
+            if(v_bcd0>"100") then
+                v_bcd0 := v_bcd0 + 3;
+            end if;
+            
+            -- Zahl groeßer 4, addiere 3
+            if(v_bcd0>"100") then 
+                v_bcd0 := v_bcd0 + 3;
+            end if;
+            
+            -- Left Shift um 1 Bit
+            v_bcd1 := shift_left(v_bcd1,1);
+            v_bcd1(0) := v_bcd0(3);
+
+            -- Left Shift um 1 Bit
+            v_bcd0 := shift_left(v_bcd0,1);
+            v_bcd0(0) := v_number(2-i);
+
         END LOOP;
         s_bcd0 <= v_bcd0;
         s_bcd1 <= v_bcd1;
     END PROCESS;
-    o_ascii0 <= ?;
-    o_ascii1 <= ?;
+    o_ascii0 <= std_logic_vector(s_bcd0);
+    o_ascii1 <= std_logic_vector(s_bcd1);
 END ARCHITECTURE behavioral;
