@@ -96,33 +96,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,200)" to="(440,200)"/>
     <wire from="(350,560)" to="(430,560)"/>
     <wire from="(430,560)" to="(500,560)"/>
-    <comp lib="1" loc="(270,110)" name="NOR Gate">
-      <a name="facing" val="west"/>
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="6" loc="(461,397)" name="Text">
       <a name="text" val="Das zweite Schaltbild dient der Simulation der Verzögerung der Inverter. Hierzu können die Konstanten unabhängig voneinander mit 0x0 und 0x1 verwendet werden."/>
-    </comp>
-    <comp lib="1" loc="(260,470)" name="NOR Gate">
-      <a name="facing" val="west"/>
-      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(370,450)" name="Constant">
       <a name="facing" val="west"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="1" loc="(400,90)" name="NOT Gate">
+    <comp lib="0" loc="(550,560)" name="Pin">
       <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(240,350)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="label" val="G3,"/>
-    </comp>
-    <comp lib="0" loc="(230,710)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="label" val="G3"/>
+      <a name="label" val="CLK"/>
     </comp>
     <comp lib="0" loc="(170,710)" name="Pin">
       <a name="facing" val="north"/>
@@ -137,23 +120,40 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(500,560)" name="Constant">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="0" loc="(550,560)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="label" val="CLK"/>
+    <comp lib="0" loc="(240,350)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="label" val="G3,"/>
+    </comp>
+    <comp lib="0" loc="(230,710)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="label" val="G3"/>
     </comp>
     <comp lib="1" loc="(280,180)" name="AND Gate">
       <a name="facing" val="west"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(560,200)" name="Pin">
+    <comp lib="1" loc="(260,470)" name="NOR Gate">
       <a name="facing" val="west"/>
-      <a name="label" val="CLK"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(270,110)" name="NOR Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(270,540)" name="AND Gate">
       <a name="facing" val="west"/>
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(390,450)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(560,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="1" loc="(400,90)" name="NOT Gate">
       <a name="facing" val="west"/>
     </comp>
   </circuit>
@@ -202,16 +202,79 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(490,280)" to="(560,280)"/>
     <wire from="(230,220)" to="(230,280)"/>
     <wire from="(230,510)" to="(230,570)"/>
-    <comp lib="1" loc="(460,280)" name="NOT Gate">
-      <a name="facing" val="west"/>
+    <comp lib="6" loc="(462,316)" name="Text">
+      <a name="text" val="Das zweite Schaltbild dient der Simulation der Verzögerung der Inverter. Hierzu können die Konstanten unabhängig voneinander mit 0x0 und 0x1 verwendet werden."/>
     </comp>
     <comp lib="0" loc="(560,280)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="BTN2"/>
     </comp>
+    <comp lib="0" loc="(440,570)" name="Constant">
+      <a name="facing" val="west"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="6" loc="(446,571)" name="Text"/>
+    <comp lib="0" loc="(190,530)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="label" val="BTN2 NEG"/>
+    </comp>
+    <comp lib="0" loc="(190,220)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="label" val="BTN2 2NEG"/>
+    </comp>
+    <comp lib="1" loc="(250,150)" name="NOR Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(310,450)" name="AND Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(370,570)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(460,280)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(500,570)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(250,440)" name="NOR Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(190,380)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="label" val="G1"/>
+    </comp>
+    <comp lib="1" loc="(370,280)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
     <comp lib="0" loc="(190,90)" name="Pin">
       <a name="output" val="true"/>
       <a name="label" val="G1"/>
+    </comp>
+    <comp lib="6" loc="(459,553)" name="Text"/>
+    <comp lib="0" loc="(190,240)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="label" val="BTN2 NEG"/>
+    </comp>
+    <comp lib="6" loc="(436,539)" name="Text"/>
+    <comp lib="0" loc="(190,350)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="label" val="G2"/>
+    </comp>
+    <comp lib="0" loc="(340,570)" name="Constant">
+      <a name="facing" val="west"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(190,510)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="label" val="BTN2 2NEG"/>
+    </comp>
+    <comp lib="1" loc="(310,160)" name="AND Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(190,60)" name="Pin">
       <a name="output" val="true"/>
@@ -221,68 +284,89 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="west"/>
       <a name="label" val="BTN2"/>
     </comp>
-    <comp lib="6" loc="(459,553)" name="Text"/>
-    <comp lib="0" loc="(440,570)" name="Constant">
-      <a name="facing" val="west"/>
-      <a name="value" val="0x0"/>
+  </circuit>
+  <circuit name="FPGA_RS2">
+    <a name="circuit" val="FPGA_RS2"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(250,230)" to="(280,230)"/>
+    <wire from="(290,130)" to="(380,130)"/>
+    <wire from="(130,190)" to="(290,190)"/>
+    <wire from="(130,210)" to="(190,210)"/>
+    <wire from="(130,150)" to="(190,150)"/>
+    <wire from="(130,170)" to="(280,170)"/>
+    <wire from="(70,110)" to="(190,110)"/>
+    <wire from="(70,250)" to="(190,250)"/>
+    <wire from="(130,190)" to="(130,210)"/>
+    <wire from="(130,150)" to="(130,170)"/>
+    <wire from="(280,230)" to="(380,230)"/>
+    <wire from="(290,130)" to="(290,190)"/>
+    <wire from="(280,170)" to="(280,230)"/>
+    <wire from="(250,130)" to="(290,130)"/>
+    <comp lib="0" loc="(70,250)" name="Pin">
+      <a name="label" val="S"/>
     </comp>
-    <comp lib="1" loc="(250,150)" name="NOR Gate">
-      <a name="facing" val="north"/>
+    <comp lib="0" loc="(70,110)" name="Pin">
+      <a name="label" val="R"/>
+    </comp>
+    <comp lib="1" loc="(250,230)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(190,220)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="label" val="BTN2 2NEG"/>
-    </comp>
-    <comp lib="1" loc="(310,160)" name="AND Gate">
-      <a name="facing" val="north"/>
+    <comp lib="1" loc="(250,130)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(250,440)" name="NOR Gate">
-      <a name="facing" val="north"/>
+    <comp lib="0" loc="(380,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q"/>
+    </comp>
+    <comp lib="0" loc="(380,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q neg"/>
+    </comp>
+  </circuit>
+  <circuit name="FPGA_RS1">
+    <a name="circuit" val="FPGA_RS1"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(250,230)" to="(280,230)"/>
+    <wire from="(290,130)" to="(380,130)"/>
+    <wire from="(130,190)" to="(290,190)"/>
+    <wire from="(130,210)" to="(190,210)"/>
+    <wire from="(130,150)" to="(190,150)"/>
+    <wire from="(130,170)" to="(280,170)"/>
+    <wire from="(70,110)" to="(190,110)"/>
+    <wire from="(70,250)" to="(190,250)"/>
+    <wire from="(130,190)" to="(130,210)"/>
+    <wire from="(130,150)" to="(130,170)"/>
+    <wire from="(280,230)" to="(380,230)"/>
+    <wire from="(290,130)" to="(290,190)"/>
+    <wire from="(280,170)" to="(280,230)"/>
+    <wire from="(250,130)" to="(290,130)"/>
+    <comp lib="0" loc="(70,250)" name="Pin">
+      <a name="label" val="S"/>
+    </comp>
+    <comp lib="0" loc="(380,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q"/>
+    </comp>
+    <comp lib="1" loc="(250,130)" name="NOR Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="6" loc="(436,539)" name="Text"/>
-    <comp lib="0" loc="(190,380)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="label" val="G1"/>
-    </comp>
-    <comp lib="0" loc="(190,240)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="label" val="BTN2 NEG"/>
-    </comp>
-    <comp lib="1" loc="(370,280)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(190,510)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="label" val="BTN2 2NEG"/>
-    </comp>
-    <comp lib="6" loc="(446,571)" name="Text"/>
-    <comp lib="1" loc="(370,570)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(500,570)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(462,316)" name="Text">
-      <a name="text" val="Das zweite Schaltbild dient der Simulation der Verzögerung der Inverter. Hierzu können die Konstanten unabhängig voneinander mit 0x0 und 0x1 verwendet werden."/>
-    </comp>
-    <comp lib="0" loc="(340,570)" name="Constant">
-      <a name="facing" val="west"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(190,530)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="label" val="BTN2 NEG"/>
-    </comp>
-    <comp lib="0" loc="(190,350)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="label" val="G2"/>
-    </comp>
-    <comp lib="1" loc="(310,450)" name="AND Gate">
-      <a name="facing" val="north"/>
+    <comp lib="1" loc="(250,230)" name="NOR Gate">
       <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(380,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q neg"/>
+    </comp>
+    <comp lib="0" loc="(70,110)" name="Pin">
+      <a name="label" val="R"/>
     </comp>
   </circuit>
 </project>
