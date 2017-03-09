@@ -78,7 +78,7 @@ begin
         btn_old(i) <= btn(i);
       end loop;
 
-      -- Eine Sekunde hochzÃ¤hlen
+      -- Eine Sekunde hochzählen
       secs <= (secs + 1) mod 60;
       -- Wenn Sekunden > 60 + 1 Minute. 
       IF secs = 0 THEN
@@ -115,6 +115,11 @@ begin
                next_state := NTIME;
           END IF;
           
+          -- BTN1' & !BTN0'
+          IF (btn_triggered(1)='1') AND (NOT btn_triggered(0)='1') THEN
+               next_state := SET_ALARM;
+          END IF;
+          
           -- Minuten nach oben zaehlen BTN2
           IF (btn_triggered(2)='1') THEN
             mins <= (mins + 1) mod 60;
@@ -129,6 +134,12 @@ begin
         when SET_ALARM =>
           -- BTN1' & !BTN0'
           IF (btn_triggered(1)='1') AND (NOT btn_triggered(0)='1') THEN
+            next_state := NTIME;
+          END IF;
+          
+          -- BTN0' & !BTN1'
+          IF (btn_triggered(0)='1') AND (NOT btn_triggered(1)='1') THEN
+            next_state := SET_TIME;
           END IF;
 
           -- Minuten nach oben zaehlen BTN2
