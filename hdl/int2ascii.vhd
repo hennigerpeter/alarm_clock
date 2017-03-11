@@ -6,8 +6,7 @@ USE IEEE.numeric_std.all;
 ENTITY int2ascii IS
     Port ( i_number : IN  integer RANGE 0 TO 59;
            o_ascii0   : OUT std_logic_vector(7 downto 0);
-           o_ascii1   : OUT std_logic_vector(7 downto 0)
-           );
+           o_ascii1   : OUT std_logic_vector(7 downto 0));
 END ENTITY int2ascii;
 
 ARCHITECTURE behavioral OF int2ascii IS
@@ -23,34 +22,25 @@ BEGIN
         v_bcd1 := "0000";
         v_number := to_unsigned(i_number, v_number'length);
 
-        -- Nur einen Durchlauf machen, da v_bcd0 und v_bcd1 nicht per Loop durchlaufen werden können
-        FOR i IN 0 TO 1 LOOP
-            --TODO: Pseudocode umsetzen
+        FOR i IN 1 TO v_number'length LOOP
+        
+            IF v_bcd0 > "0100" THEN
+                v_bcd0 := v_bcd0 + "0011";
+            END IF;
 
-            -- Zahl größer 4, addiere 3
-            if(v_bcd0>"100") then
-                v_bcd0 := v_bcd0 + 3;
-            end if;
+            IF v_bcd1 > "0100" THEN
+                v_bcd1 := v_bcd1 + "0011";
+            END IF;
             
-            -- Zahl größer 4, addiere 3
-            if(v_bcd0>"100") then 
-                v_bcd0 := v_bcd0 + 3;
-            end if;
-
-            -- Left Shift um 1 Bit
-            v_bcd1 := shift_left(v_bcd1,1);
+            v_bcd1 := left_shift(v_bcd1, 1);
             v_bcd1(0) := v_bcd0(3);
-
-            -- Left Shift um 1 Bit
-            v_bcd0 := shift_left(v_bcd0,1);
-            v_bcd0(0) := v_number(2-i);
-
+            
+            v_bcd0 := left_shift(v_bcd0, 1);
+            v_bcd0(0) := v_number(v_number'length - i);
         END LOOP;
         s_bcd0 <= v_bcd0;
         s_bcd1 <= v_bcd1;
     END PROCESS;
-    o_ascii0(3 DOWNTO 0) <= std_logic_vector(s_bcd0);
-    o_ascii0(7 DOWNTO 4) <= "0011"; -- ASCII Ziffern 0-9 entsprechen den Zahlen 30-39, es wird demnach eine 3 in der linken BCD vorangestellt
-    o_ascii1(3 DOWNTO 0) <= std_logic_vector(s_bcd1);
-    o_ascii1(7 DOWNTO 4) <= "0011"; -- ASCII Ziffern 0-9 entsprechen den Zahlen 30-39, es wird demnach eine 3 in der linken BCD vorangestellt
+    o_ascii0 <= std_logic_vector("0011"&s_bcd0);
+    o_ascii1 <= std_logic_vector("0011"&s_bcd1);
 END ARCHITECTURE behavioral;
