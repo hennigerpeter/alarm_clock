@@ -32,10 +32,10 @@ BEGIN
                 v_bcd1 := v_bcd1 + "0011";
             END IF;
             
-            v_bcd1 := left_shift(v_bcd1, 1);
+            v_bcd1 := shift_left(v_bcd1, 1);
             v_bcd1(0) := v_bcd0(3);
             
-            v_bcd0 := left_shift(v_bcd0, 1);
+            v_bcd0 := shift_left(v_bcd0, 1);
             v_bcd0(0) := v_number(v_number'length - i);
         END LOOP;
         s_bcd0 <= v_bcd0;
