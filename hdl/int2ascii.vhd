@@ -50,7 +50,7 @@ BEGIN
         s_bcd1 <= v_bcd1;
     END PROCESS;
     o_ascii0(3 DOWNTO 0) <= std_logic_vector(s_bcd0);
-    o_ascii0(7 DOWNTO 0) <= "0011"; -- ASCII Ziffern 0-9 entsprechen den Zahlen 30-39, es wird demnach eine 3 in der linken BCD vorangestellt
-    o_ascii1 <= std_logic_vector(s_bcd1);
-    o_ascii1(7 DOWNTO 0) <= "0011"; -- ASCII Ziffern 0-9 entsprechen den Zahlen 30-39, es wird demnach eine 3 in der linken BCD vorangestellt
+    o_ascii0(7 DOWNTO 4) <= "0011"; -- ASCII Ziffern 0-9 entsprechen den Zahlen 30-39, es wird demnach eine 3 in der linken BCD vorangestellt
+    o_ascii1(3 DOWNTO 0) <= std_logic_vector(s_bcd1);
+    o_ascii1(7 DOWNTO 4) <= "0011"; -- ASCII Ziffern 0-9 entsprechen den Zahlen 30-39, es wird demnach eine 3 in der linken BCD vorangestellt
 END ARCHITECTURE behavioral;
