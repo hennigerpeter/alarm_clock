@@ -3,6 +3,9 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.std_logic_unsigned.all;
 USE IEEE.numeric_std.all;
 
+-- Infos zum Algorithmus
+-- http://www.johnloomis.org/ece314/notes/devices/binary_to_BCD/bin_to_bcd.html
+
 ENTITY int2ascii IS
     Port ( i_number : IN  integer RANGE 0 TO 59;
            o_ascii0   : OUT std_logic_vector(7 downto 0);
