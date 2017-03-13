@@ -78,7 +78,7 @@ begin
         btn_old(i) <= btn(i);
       end loop;
 
-      -- Eine Sekunde hochzählen
+      -- Eine Sekunde hochzÃ¤hlen
       secs <= (secs + 1) mod 60;
       -- Wenn Sekunden > 60 + 1 Minute. 
       IF secs = 0 THEN
