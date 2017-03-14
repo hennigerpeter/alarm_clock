@@ -121,12 +121,12 @@ begin
           END IF;
           
           -- Minuten nach oben zaehlen BTN2
-          IF (btn_triggered(2)='1') THEN
+          IF (btn_triggered(2)='1') OR (BTN(2)='1' AND fasttrigger = '1') THEN
             mins <= (mins + 1) mod 60;
           END IF;
           
           -- Stunden nach oben zaehlen BTN3
-          IF (btn_triggered(3)='1') THEN
+          IF (btn_triggered(3)='1') OR (BTN(3)='1' AND fasttrigger = '1') THEN
             hours <= (hours + 1) mod 24;
           END IF;
         
@@ -143,12 +143,12 @@ begin
           END IF;
 
           -- Minuten nach oben zaehlen BTN2
-          IF (btn_triggered(2)='1') THEN
+          IF (btn_triggered(2)='1') OR (BTN(2)='1' AND fasttrigger = '1') THEN
             wmins <= (wmins + 1) mod 60;
           END IF;
 
           -- Stunden nach oben zaehlen BTN3
-          IF (btn_triggered(3)='1') THEN
+          IF (btn_triggered(3)='1') OR (BTN(3)='1' AND fasttrigger = '1') THEN
             whours <= (whours + 1) mod 24;
           END IF;
         
