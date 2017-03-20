@@ -1,0 +1,797 @@
+
+*** Running vivado
+    with args -log alarm_clock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source alarm_clock.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source alarm_clock.tcl -notrace
+Command: synth_design -top alarm_clock -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12220 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 283.063 ; gain = 73.566
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [F:/Repos/alarm_clock/hdl/display.vhd:124]
+WARNING: [Synth 8-1565] actual for formal port ce0 is neither a static name nor a globally static expression [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:267]
+WARNING: [Synth 8-1565] actual for formal port alarm_s is neither a static name nor a globally static expression [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'alarm_clock' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:60]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'iic_0_scl_iobuf' of component 'IOBUF' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:17333]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (1#1) [E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:17333]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'iic_0_sda_iobuf' of component 'IOBUF' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:208]
+INFO: [Synth 8-637] synthesizing blackbox instance 'system_i' of component 'system' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:215]
+	Parameter INIT_OUT bound to: 0 - type: integer 
+	Parameter PRESELECT_I0 bound to: 0 - type: bool 
+	Parameter PRESELECT_I1 bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'BUFGCTRL' declared at 'E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:661' bound to instance 'BufGCtrlMux_l' of component 'BUFGCTRL' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'BUFGCTRL' [E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:661]
+	Parameter INIT_OUT bound to: 0 - type: integer 
+	Parameter IS_CE0_INVERTED bound to: 1'b0 
+	Parameter IS_CE1_INVERTED bound to: 1'b0 
+	Parameter IS_I0_INVERTED bound to: 1'b0 
+	Parameter IS_I1_INVERTED bound to: 1'b0 
+	Parameter IS_IGNORE0_INVERTED bound to: 1'b0 
+	Parameter IS_IGNORE1_INVERTED bound to: 1'b0 
+	Parameter IS_S0_INVERTED bound to: 1'b0 
+	Parameter IS_S1_INVERTED bound to: 1'b0 
+	Parameter PRESELECT_I0 bound to: 0 - type: bool 
+	Parameter PRESELECT_I1 bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'BUFGCTRL' (2#1) [E:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:661]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'F:/Repos/alarm_clock/hdl/clock_div.vhd:7' bound to instance 'inst_clk_div' of component 'clock_div' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:282]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [F:/Repos/alarm_clock/hdl/clock_div.vhd:13]
+WARNING: [Synth 8-3512] assigned value '7628' out of range [F:/Repos/alarm_clock/hdl/clock_div.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (3#1) [F:/Repos/alarm_clock/hdl/clock_div.vhd:13]
+INFO: [Synth 8-3491] module 'controller' declared at 'F:/Repos/alarm_clock/hdl/controller.vhd:5' bound to instance 'controller1' of component 'controller' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:292]
+INFO: [Synth 8-638] synthesizing module 'controller' [F:/Repos/alarm_clock/hdl/controller.vhd:18]
+	Parameter Delta bound to: 11 - type: integer 
+INFO: [Synth 8-3491] module 'trigger_gen' declared at 'F:/Repos/alarm_clock/hdl/trigger_gen.vhd:5' bound to instance 'fasttimer' of component 'trigger_gen' [F:/Repos/alarm_clock/hdl/controller.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'trigger_gen' [F:/Repos/alarm_clock/hdl/trigger_gen.vhd:13]
+	Parameter Delta bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'trigger_gen' (4#1) [F:/Repos/alarm_clock/hdl/trigger_gen.vhd:13]
+	Parameter Delta bound to: 13 - type: integer 
+INFO: [Synth 8-3491] module 'trigger_gen' declared at 'F:/Repos/alarm_clock/hdl/trigger_gen.vhd:5' bound to instance 'sectimer' of component 'trigger_gen' [F:/Repos/alarm_clock/hdl/controller.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'trigger_gen__parameterized1' [F:/Repos/alarm_clock/hdl/trigger_gen.vhd:13]
+	Parameter Delta bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'trigger_gen__parameterized1' (4#1) [F:/Repos/alarm_clock/hdl/trigger_gen.vhd:13]
+WARNING: [Synth 8-614] signal 'btn_old' is read in the process but is not in the sensitivity list [F:/Repos/alarm_clock/hdl/controller.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'controller' (5#1) [F:/Repos/alarm_clock/hdl/controller.vhd:18]
+INFO: [Synth 8-3491] module 'display' declared at 'F:/Repos/alarm_clock/hdl/display.vhd:29' bound to instance 'oled' of component 'display' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'display' [F:/Repos/alarm_clock/hdl/display.vhd:50]
+	Parameter Delta bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'trigger_gen' declared at 'F:/Repos/alarm_clock/hdl/trigger_gen.vhd:5' bound to instance 'trig' of component 'trigger_gen' [F:/Repos/alarm_clock/hdl/display.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'trigger_gen__parameterized3' [F:/Repos/alarm_clock/hdl/trigger_gen.vhd:13]
+	Parameter Delta bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'trigger_gen__parameterized3' (5#1) [F:/Repos/alarm_clock/hdl/trigger_gen.vhd:13]
+INFO: [Synth 8-3491] module 'PmodOLEDCtrl' declared at 'F:/Repos/alarm_clock/hdl/PmodOLEDCtrl.vhd:23' bound to instance 'oled' of component 'PmodOLEDCtrl' [F:/Repos/alarm_clock/hdl/display.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'PmodOLEDCtrl' [F:/Repos/alarm_clock/hdl/PmodOLEDCtrl.vhd:42]
+INFO: [Synth 8-3491] module 'OledInit' declared at 'F:/Repos/alarm_clock/hdl/OledInit.vhd:19' bound to instance 'Init' of component 'OledInit' [F:/Repos/alarm_clock/hdl/PmodOLEDCtrl.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [F:/Repos/alarm_clock/hdl/OledInit.vhd:34]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'F:/Repos/alarm_clock/hdl/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [F:/Repos/alarm_clock/hdl/OledInit.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [F:/Repos/alarm_clock/hdl/SpiCtrl.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (6#1) [F:/Repos/alarm_clock/hdl/SpiCtrl.vhd:32]
+INFO: [Synth 8-3491] module 'Delay' declared at 'F:/Repos/alarm_clock/hdl/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [F:/Repos/alarm_clock/hdl/OledInit.vhd:133]
+INFO: [Synth 8-638] synthesizing module 'Delay' [F:/Repos/alarm_clock/hdl/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (7#1) [F:/Repos/alarm_clock/hdl/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (8#1) [F:/Repos/alarm_clock/hdl/OledInit.vhd:34]
+INFO: [Synth 8-3491] module 'OledEx' declared at 'F:/Repos/alarm_clock/hdl/OledExample.vhd:31' bound to instance 'Example' of component 'OledEx' [F:/Repos/alarm_clock/hdl/PmodOLEDCtrl.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'OledEx' [F:/Repos/alarm_clock/hdl/OledExample.vhd:46]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'F:/Repos/alarm_clock/hdl/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [F:/Repos/alarm_clock/hdl/OledExample.vhd:168]
+INFO: [Synth 8-3491] module 'Delay' declared at 'F:/Repos/alarm_clock/hdl/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [F:/Repos/alarm_clock/hdl/OledExample.vhd:179]
+INFO: [Synth 8-637] synthesizing blackbox instance 'CHAR_LIB_COMP' of component 'charLib' [F:/Repos/alarm_clock/hdl/OledExample.vhd:187]
+INFO: [Synth 8-256] done synthesizing module 'OledEx' (9#1) [F:/Repos/alarm_clock/hdl/OledExample.vhd:46]
+INFO: [Synth 8-226] default block is never used [F:/Repos/alarm_clock/hdl/PmodOLEDCtrl.vhd:150]
+INFO: [Synth 8-256] done synthesizing module 'PmodOLEDCtrl' (10#1) [F:/Repos/alarm_clock/hdl/PmodOLEDCtrl.vhd:42]
+INFO: [Synth 8-3491] module 'int2ascii' declared at 'F:/Repos/alarm_clock/hdl/int2ascii.vhd:6' bound to instance 'c_hours' of component 'int2ascii' [F:/Repos/alarm_clock/hdl/display.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'int2ascii' [F:/Repos/alarm_clock/hdl/int2ascii.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'int2ascii' (11#1) [F:/Repos/alarm_clock/hdl/int2ascii.vhd:12]
+INFO: [Synth 8-3491] module 'int2ascii' declared at 'F:/Repos/alarm_clock/hdl/int2ascii.vhd:6' bound to instance 'c_mins' of component 'int2ascii' [F:/Repos/alarm_clock/hdl/display.vhd:133]
+INFO: [Synth 8-3491] module 'int2ascii' declared at 'F:/Repos/alarm_clock/hdl/int2ascii.vhd:6' bound to instance 'c_secs' of component 'int2ascii' [F:/Repos/alarm_clock/hdl/display.vhd:134]
+INFO: [Synth 8-3491] module 'int2ascii' declared at 'F:/Repos/alarm_clock/hdl/int2ascii.vhd:6' bound to instance 'c_whours' of component 'int2ascii' [F:/Repos/alarm_clock/hdl/display.vhd:135]
+INFO: [Synth 8-3491] module 'int2ascii' declared at 'F:/Repos/alarm_clock/hdl/int2ascii.vhd:6' bound to instance 'c_wmins' of component 'int2ascii' [F:/Repos/alarm_clock/hdl/display.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'display' (12#1) [F:/Repos/alarm_clock/hdl/display.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'alarm_clock' (13#1) [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:60]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 326.105 ; gain = 116.609
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 326.105 ; gain = 116.609
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'charLib' instantiated as 'oled/oled/Example/CHAR_LIB_COMP' [F:/Repos/alarm_clock/hdl/OledExample.vhd:187]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'system' instantiated as 'system_i' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:215]
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -include_generated_clocks clk_fpga_2]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -include_generated_clocks clk_fpga_3]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/alarm_clock_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/alarm_clock_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/alarm_clock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 633.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hours" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
+INFO: [Synth 8-5544] ROM "SPI_FIN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift_counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Delay'
+INFO: [Synth 8-5544] ROM "ms_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "temp_delay_ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FIN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "init_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "example_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[1,14]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[1,15]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,0]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,1]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,2]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,3]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,5]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,6]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[2,7]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,9]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,10]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,11]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,12]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,13]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,14]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "clock_screen[3,15]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    send |                              001 |                              001
+                   hold1 |                              010 |                              010
+                   hold2 |                              011 |                              011
+                   hold3 |                              100 |                              100
+                   hold4 |                              101 |                              101
+                    done |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                    hold |                               01 |                               01
+                    done |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Delay'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 38    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 69    
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	  31 Input     12 Bit        Muxes := 1     
+	  31 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  31 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 16    
+	   2 Input      7 Bit        Muxes := 11    
+	   4 Input      7 Bit        Muxes := 11    
+	   2 Input      6 Bit        Muxes := 4     
+	  37 Input      6 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	  31 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 17    
+	   9 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 10    
+	   5 Input      2 Bit        Muxes := 3     
+	  31 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 38    
+	   4 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 2     
+	  37 Input      1 Bit        Muxes := 9     
+	  31 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clock_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module trigger_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+Module trigger_gen__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+Module controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+Module trigger_gen__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+Module SpiCtrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 1     
+Module Delay 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module OledInit 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	  37 Input      6 Bit        Muxes := 1     
+	  37 Input      1 Bit        Muxes := 9     
+Module OledEx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 66    
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  31 Input     12 Bit        Muxes := 1     
+	  31 Input     11 Bit        Muxes := 1     
+	  31 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 16    
+	  31 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  31 Input      2 Bit        Muxes := 2     
+	  31 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module PmodOLEDCtrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module int2ascii 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 7     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+Module display 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 10    
+	   4 Input      7 Bit        Muxes := 11    
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[1,4][7:0]' into 'oled/oled/Example/current_screen_reg[0,2][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[0,4][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[1,5][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[0,5][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[3,6][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[0,6][7:0]' into 'oled/oled/Example/current_screen_reg[1,6][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[3,7][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[3,8][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,8][7:0]' into 'oled/oled/Example/current_screen_reg[2,7][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,9][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[1,9][7:0]' into 'oled/oled/Example/current_screen_reg[1,6][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[0,9][7:0]' into 'oled/oled/Example/current_screen_reg[1,6][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,10][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,11][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,12][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[1,12][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[0,12][7:0]' into 'oled/oled/Example/current_screen_reg[1,6][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,13][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,14][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[2,15][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-4471] merging register 'oled/oled/Example/current_screen_reg[0,15][7:0]' into 'oled/oled/Example/current_screen_reg[2,4][7:0]' [F:/Repos/alarm_clock/hdl/OledExample.vhd:403]
+INFO: [Synth 8-5546] ROM "inst_clk_div/clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,15][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,14][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,13][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,13][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,12][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,12][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,10][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,10][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,9][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,10][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,7][0]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,6][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,6][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,5][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,5][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,5][0]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,4][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,4][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,4][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,3][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,3][6]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,3][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,3][0]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,3][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,2][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,4][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,2][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,2][0]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,2][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,1][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,1][0]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,1][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,0][0]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,0][0]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,0][0]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,15][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,15][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,14][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,13][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,13][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,13][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,11][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,11][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,10][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,10][6]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,9][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,10][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,7][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,6][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,6][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,5][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,5][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,4][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,4][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,4][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,3][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,3][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,3][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,3][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,2][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,2][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,2][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,2][1]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,2][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,1][1]' (FDE) to 'oled/oled/Example/current_screen_reg[3,1][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,1][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,1][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,1][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,0][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,0][1]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,0][1]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,15][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,15][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][6]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,14][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,13][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,13][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,9][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,7][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,7][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,7][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,6][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,6][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,5][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,5][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,5][2]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,4][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,3][2]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,4][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,3][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,3][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,3][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,3][2]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,3][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,2][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,2][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,2][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,1][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,1][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,1][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,0][2]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,0][2]' (FDE) to 'oled/oled/Example/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,0][2]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,15][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,14][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,15][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,14][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,13][3]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,14][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,13][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,13][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,13][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,13][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,12][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,13][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,11][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,15][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[3,10][3]' (FDE) to 'oled/oled/Example/current_screen_reg[3,13][5]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,10][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[0,10][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[1,7][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][4]'
+INFO: [Synth 8-3886] merging instance 'oled/oled/Example/current_screen_reg[2,7][3]' (FDE) to 'oled/oled/Example/current_screen_reg[1,15][4]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled/oled/Example/temp_delay_ms_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled/oled/Example/after_char_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\oled/oled/Example/after_char_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled/oled/Example/after_update_state_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\oled/oled/Example/after_update_state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled/oled/Init/temp_dc_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled/oled/Example/temp_char_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\oled/oled/Example/temp_addr_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Init/temp_dc_reg) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/after_char_state_reg[1]) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/after_char_state_reg[0]) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/temp_delay_ms_reg[11]) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/temp_char_reg[7]) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/temp_addr_reg[10]) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/after_update_state_reg[3]) is unused and will be removed from module alarm_clock.
+WARNING: [Synth 8-3332] Sequential element (oled/oled/Example/after_update_state_reg[2]) is unused and will be removed from module alarm_clock.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+-------------------------------+---------------+----------------+
+|Module Name | RTL Object                    | Depth x Width | Implemented As | 
++------------+-------------------------------+---------------+----------------+
+|OledInit    | after_state                   | 64x1          | LUT            | 
+|OledInit    | after_state                   | 64x6          | LUT            | 
+|OledInit    | temp_spi_data                 | 64x1          | LUT            | 
+|OledInit    | temp_spi_data                 | 64x8          | LUT            | 
+|OledEx      | after_state                   | 32x1          | LUT            | 
+|OledEx      | temp_addr                     | 32x1          | LUT            | 
+|alarm_clock | oled/oled/Init/after_state    | 64x6          | LUT            | 
+|alarm_clock | oled/oled/Init/after_state    | 64x1          | LUT            | 
+|alarm_clock | oled/oled/Init/temp_spi_data  | 64x1          | LUT            | 
+|alarm_clock | oled/oled/Init/temp_spi_data  | 64x8          | LUT            | 
+|alarm_clock | oled/oled/Example/after_state | 32x1          | LUT            | 
+|alarm_clock | oled/oled/Example/temp_addr   | 32x1          | LUT            | 
++------------+-------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |system        |         1|
+|2     |charLib       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |charLib_bbox |     1|
+|2     |system_bbox  |     1|
+|3     |BUFG         |     2|
+|4     |BUFGCTRL     |     1|
+|5     |CARRY4       |    30|
+|6     |LUT1         |   122|
+|7     |LUT2         |    45|
+|8     |LUT3         |    45|
+|9     |LUT4         |    63|
+|10    |LUT5         |    91|
+|11    |LUT6         |   133|
+|12    |MUXF7        |     7|
+|13    |MUXF8        |     1|
+|14    |FDCE         |    78|
+|15    |FDRE         |   258|
+|16    |FDSE         |    12|
+|17    |IBUF         |     8|
+|18    |IOBUF        |     2|
+|19    |OBUF         |    14|
++------+-------------+------+
+
+Report Instance Areas: 
++------+-------------------+----------------------------+------+
+|      |Instance           |Module                      |Cells |
++------+-------------------+----------------------------+------+
+|1     |top                |                            |   940|
+|2     |  controller1      |controller                  |   190|
+|3     |    fasttimer      |trigger_gen                 |    31|
+|4     |    sectimer       |trigger_gen__parameterized1 |    36|
+|5     |  inst_clk_div     |clock_div                   |    34|
+|6     |  oled             |display                     |   668|
+|7     |    oled           |PmodOLEDCtrl                |   619|
+|8     |      Example      |OledEx                      |   409|
+|9     |        DELAY_COMP |Delay_0                     |    83|
+|10    |        SPI_COMP   |SpiCtrl_1                   |    49|
+|11    |      Init         |OledInit                    |   206|
+|12    |        DELAY_COMP |Delay                       |    84|
+|13    |        SPI_COMP   |SpiCtrl                     |    54|
+|14    |    trig           |trigger_gen__parameterized3 |    46|
++------+-------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 633.039 ; gain = 116.609
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 633.039 ; gain = 423.543
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+261 Infos, 34 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 633.039 ; gain = 423.543
+INFO: [Common 17-1381] The checkpoint 'F:/Repos/alarm_clock/project/project_1/project_1.runs/synth_1/alarm_clock.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 633.039 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 20 16:19:48 2017...

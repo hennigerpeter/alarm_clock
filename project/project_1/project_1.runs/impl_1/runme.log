@@ -1,0 +1,108 @@
+
+*** Running vivado
+    with args -log alarm_clock.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source alarm_clock.tcl -notrace
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source alarm_clock.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 965.953 ; gain = 499.988
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_0]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:429]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_2]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:430]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_0]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:431]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_3]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:432]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_1]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:433]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_2]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:434]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_1]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:435]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_3]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:436]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_3'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -include_generated_clocks clk_fpga_2]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -include_generated_clocks clk_fpga_3]'. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Constraints 18-4644] set_clock_groups: All clock groups specified are empty. Please specify atleast one clock group which is not empty. [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc:438]
+Finished Parsing XDC File [F:/Repos/alarm_clock/xdc/ZYBO_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'charLib' instantiated as 'oled/oled/Example/CHAR_LIB_COMP' [F:/Repos/alarm_clock/hdl/OledExample.vhd:187]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'system' instantiated as 'system_i' [F:/Repos/alarm_clock/hdl/alarm_clock.vhd:215]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 968.109 ; gain = 757.863
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC 23-20] Rule violation (INBB-3) Black Box Instances - Cell 'oled/oled/Example/CHAR_LIB_COMP' of type 'oled/oled/Example/CHAR_LIB_COMP/charLib' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC 23-20] Rule violation (INBB-3) Black Box Instances - Cell 'system_i' of type 'system_i/system' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 2 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.838 . Memory (MB): peak = 968.109 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+32 Infos, 18 Warnings, 13 Critical Warnings and 3 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 20 16:20:29 2017...

@@ -78,89 +78,106 @@ begin
         btn_old(i) <= btn(i);
       end loop;
 
-      if (sectrigger='1') & (secs = 59)
-        secs <= 0;
-        if (mins = 59)
-          mins <= 0;
-        else mins <= mins + 1;
-          if (hours = 23)
-            hours <=0;
-          else hours <= hours + 1;
-      else secs <= secs + 1;
+        -- TODO: Zaehle Uhr hoch
+        -- Sekunden bis 59 hochzählen, Sonderbehandlungen bei 59s und eingehender Flanke
+        if(sectrigger='1' AND secs = 59) then 
+          secs <= 0;
 
-      -- Alarm ausgeben
-      -- sw(0) Alarm on/off
-      IF  (mins = wmins) AND (
-      hours = whours) AND (sw(0)='1') THEN
+          if(mins=59) then
+            mins <= 0;
+
+            if(hours = 23) then
+              hours <= 0;
+            else
+              hours <= hours + 1;
+            end if;
+
+          else 
+            mins <= mins +1;
+          end if;
+        
+        else 
+          secs <= secs + 1;
+        end if;
+
+      -- TODO: Pruefe, ob Alarm ausgeloest werden muss
+      -- sofern switch0 (Alarm on) aktiviert ist
+      if (sw(0) = '1') then
+        if(hours = whours AND mins = wmins) then
           alarm <= '1';
-      ELSE
-         -- Alarm deaktivieren
-         alarm <= '0';
-      END IF;
+        else
+          alarm <= '0';
+        end if;
+      end if;
 
       case current_state is
         -- Zustand Time
         when NTIME =>
-          -- BTN0' & !BTN1'
-          IF (btn_triggered(0)='1') AND (NOT btn_triggered(1)='1') THEN
-             next_state := SET_TIME;
-          -- !BTN0' & BTN1'
-          ELSIF (NOT btn_triggered(0)='1') AND btn_triggered(1)='1' THEN
-             next_state := SET_ALARM;
-          END IF;
+          -- TODO: Setze naechsten Zustand
+          if(btn_triggered(0) = '1' AND btn_triggered(1) = '0') then
+            next_state := SET_TIME;
+          end if;
+
+          if(btn_triggered(0) = '0' AND btn_triggered(1) = '1') then
+            next_state := SET_ALARM;
+          end if;
 
         -- Zustand SetTime
         when SET_TIME =>
-          -- BTN0' & !BTN1'
-          IF (btn_triggered(0)='1') AND (NOT btn_triggered(1)='1') THEN
-               next_state := NTIME;
-          END IF;
+          -- TODO: Setze naechsten Zustand
+          if(btn_triggered(0) = '1' AND btn_triggered(1) = '0') then
+            next_state := NTIME;
+          end if;
 
-          -- BTN1' & !BTN0'
-          IF (btn_triggered(1)='1') AND (NOT btn_triggered(0)='1') THEN
-               next_state := SET_ALARM;
-          END IF;
+          if(btn_triggered(0) = '0' AND btn_triggered(1) = '1') then
+            next_state := SET_ALARM;
+          end if;
 
-          -- Minuten nach oben zaehlen BTN2
-          IF (btn_triggered(2)='1') OR (BTN(2)='1' AND fasttrigger = '1') THEN
-            mins <= mins + 1;
-            if (mins = 59)
+          -- TODO: Setze Minute und Stunde mit BTN(2) bzw. BTN(3)
+          if(fasttrigger = '1' AND btn_triggered(2) = '1') then
+            if(mins = 59) then
               mins <= 0;
-          END IF;
+            else
+              mins <= mins + 1;
+            end if;
+          end if;
 
-          -- Stunden nach oben zaehlen BTN3
-          IF (btn_triggered(3)='1') OR (BTN(3)='1' AND fasttrigger = '1') THEN
-            hours <= hours + 1;
-            if (hours = 23)
+          if(fasttrigger = '1' AND btn_triggered(3) = '1') then
+            if(hours = 23) then
               hours <= 0;
-          END IF;
+            else
+              hours <= hours + 1;
+            end if;
+          end if;
 
         -- Zustand SetAlarm
         when SET_ALARM =>
-          -- BTN1' & !BTN0'
-          IF (btn_triggered(1)='1') AND (NOT btn_triggered(0)='1') THEN
-            next_state := NTIME;
-          END IF;
 
-          -- BTN0' & !BTN1'
-          IF (btn_triggered(0)='1') AND (NOT btn_triggered(1)='1') THEN
+          -- TODO: Setze naechsten Zustand
+          if(btn_triggered(0) = '1' AND btn_triggered(1) = '0') then
             next_state := SET_TIME;
-          END IF;
+          end if;
 
-          -- Minuten nach oben zaehlen BTN2
-          IF (btn_triggered(2)='1') OR (BTN(2)='1' AND fasttrigger = '1') THEN
-            wmins <= wmins + 1;
-            if (wmins = 59)
+          if(btn_triggered(0) = '0' AND btn_triggered(1) = '1') then
+            next_state := NTIME;
+          end if;
+
+          -- TODO: Setze Minute und Stunde mit BTN(2) bzw. BTN(3)
+          if(fasttrigger = '1' AND btn_triggered(2) = '1') then
+            if(wmins = 59) then
               wmins <= 0;
-          END IF;
+            else
+              wmins <= wmins + 1;
+            end if;
+          end if;
 
-          -- Stunden nach oben zaehlen BTN3
-          IF (btn_triggered(3)='1') OR (BTN(3)='1' AND fasttrigger = '1') THEN
-            whours <= whours + 1;
-            if (whours = 23)
+          if(fasttrigger = '1' AND btn_triggered(3) = '1') then
+            if(whours = 23) then
               whours <= 0;
-          END IF;
-
+            else
+              whours <= whours + 1;
+            end if;
+          end if;
           -- Illegale Zustaende
         when others =>
           next_state := NTIME;
