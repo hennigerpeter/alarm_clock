@@ -116,51 +116,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(610,570)" to="(750,570)"/>
     <wire from="(580,210)" to="(590,210)"/>
     <wire from="(580,170)" to="(590,170)"/>
-    <comp lib="0" loc="(330,490)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Q"/>
-    </comp>
-    <comp lib="1" loc="(540,570)" name="AND Gate">
-      <a name="facing" val="west"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(540,490)" name="AND Gate">
-      <a name="facing" val="west"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(640,220)" name="NAND Gate">
-      <a name="facing" val="west"/>
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(910,100)" name="Pin">
       <a name="facing" val="west"/>
       <a name="tristate" val="false"/>
       <a name="label" val="BTN0"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(410,490)" name="NOR Gate">
-      <a name="facing" val="west"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(620,530)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLK"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,230)" name="Pin">
+    <comp lib="0" loc="(330,570)" name="Pin">
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
       <a name="label" val="/Q"/>
     </comp>
-    <comp lib="0" loc="(910,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="BTN1"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(640,150)" name="NAND Gate">
+    <comp lib="1" loc="(640,220)" name="NAND Gate">
       <a name="facing" val="west"/>
       <a name="inputs" val="2"/>
     </comp>
@@ -173,18 +140,196 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="Q"/>
     </comp>
+    <comp lib="1" loc="(410,570)" name="NOR Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(330,490)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Q"/>
+    </comp>
+    <comp lib="0" loc="(620,530)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLK"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="1" loc="(520,150)" name="NAND Gate">
       <a name="facing" val="west"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(410,570)" name="NOR Gate">
+    <comp lib="0" loc="(910,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="BTN1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(410,490)" name="NOR Gate">
       <a name="facing" val="west"/>
       <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(540,570)" name="AND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(640,150)" name="NAND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(540,490)" name="AND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(430,230)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="/Q"/>
+    </comp>
+  </circuit>
+  <circuit name="main_andereGates">
+    <a name="circuit" val="main_andereGates"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(590,170)" to="(590,180)"/>
+    <wire from="(750,570)" to="(870,570)"/>
+    <wire from="(470,150)" to="(520,150)"/>
+    <wire from="(490,510)" to="(490,520)"/>
+    <wire from="(470,190)" to="(590,190)"/>
+    <wire from="(580,250)" to="(620,250)"/>
+    <wire from="(710,200)" to="(710,290)"/>
+    <wire from="(510,470)" to="(510,490)"/>
+    <wire from="(510,570)" to="(510,590)"/>
+    <wire from="(490,530)" to="(490,550)"/>
+    <wire from="(600,290)" to="(600,510)"/>
+    <wire from="(870,100)" to="(910,100)"/>
+    <wire from="(620,220)" to="(620,250)"/>
+    <wire from="(750,170)" to="(750,570)"/>
+    <wire from="(600,290)" to="(710,290)"/>
+    <wire from="(870,100)" to="(870,570)"/>
+    <wire from="(610,570)" to="(610,590)"/>
+    <wire from="(610,130)" to="(610,150)"/>
+    <wire from="(590,190)" to="(590,210)"/>
+    <wire from="(510,490)" to="(540,490)"/>
+    <wire from="(490,230)" to="(520,230)"/>
+    <wire from="(600,510)" to="(620,510)"/>
+    <wire from="(330,490)" to="(360,490)"/>
+    <wire from="(510,570)" to="(540,570)"/>
+    <wire from="(590,550)" to="(620,550)"/>
+    <wire from="(590,470)" to="(620,470)"/>
+    <wire from="(620,220)" to="(650,220)"/>
+    <wire from="(470,150)" to="(470,190)"/>
+    <wire from="(770,240)" to="(770,490)"/>
+    <wire from="(770,490)" to="(900,490)"/>
+    <wire from="(900,160)" to="(910,160)"/>
+    <wire from="(700,200)" to="(710,200)"/>
+    <wire from="(590,510)" to="(600,510)"/>
+    <wire from="(430,230)" to="(490,230)"/>
+    <wire from="(700,170)" to="(750,170)"/>
+    <wire from="(900,160)" to="(900,490)"/>
+    <wire from="(360,490)" to="(410,490)"/>
+    <wire from="(710,130)" to="(710,200)"/>
+    <wire from="(370,520)" to="(490,520)"/>
+    <wire from="(610,150)" to="(650,150)"/>
+    <wire from="(490,180)" to="(590,180)"/>
+    <wire from="(620,510)" to="(620,530)"/>
+    <wire from="(620,530)" to="(620,550)"/>
+    <wire from="(620,470)" to="(620,490)"/>
+    <wire from="(330,570)" to="(370,570)"/>
+    <wire from="(370,570)" to="(410,570)"/>
+    <wire from="(430,150)" to="(470,150)"/>
+    <wire from="(470,470)" to="(510,470)"/>
+    <wire from="(470,590)" to="(510,590)"/>
+    <wire from="(620,490)" to="(770,490)"/>
+    <wire from="(590,590)" to="(610,590)"/>
+    <wire from="(580,130)" to="(610,130)"/>
+    <wire from="(470,550)" to="(490,550)"/>
+    <wire from="(470,510)" to="(490,510)"/>
+    <wire from="(360,490)" to="(360,530)"/>
+    <wire from="(700,240)" to="(770,240)"/>
+    <wire from="(490,180)" to="(490,230)"/>
+    <wire from="(370,520)" to="(370,570)"/>
+    <wire from="(360,530)" to="(490,530)"/>
+    <wire from="(700,130)" to="(710,130)"/>
+    <wire from="(610,570)" to="(750,570)"/>
+    <wire from="(580,210)" to="(590,210)"/>
+    <wire from="(580,170)" to="(590,170)"/>
+    <comp lib="0" loc="(910,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="BTN1"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(330,570)" name="Pin">
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
       <a name="label" val="/Q"/>
+    </comp>
+    <comp lib="0" loc="(430,230)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="/Q"/>
+    </comp>
+    <comp lib="1" loc="(650,220)" name="AND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(288,388)" name="Text">
+      <a name="text" val="getaktetes Active High RS Latch"/>
+    </comp>
+    <comp lib="0" loc="(910,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="BTN0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(540,490)" name="AND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(523,60)" name="Text">
+      <a name="text" val="getaktetes Active Low RS Latch, kann mit NAND Gates zu einem getakteten Active High RS Latch gewandelt werden (siehe main)"/>
+    </comp>
+    <comp lib="0" loc="(620,530)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLK"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(410,570)" name="NOR Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(520,150)" name="NAND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(410,490)" name="NOR Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(650,150)" name="AND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(330,490)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Q"/>
+    </comp>
+    <comp lib="0" loc="(430,150)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Q"/>
+    </comp>
+    <comp lib="1" loc="(520,230)" name="NAND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(540,570)" name="AND Gate">
+      <a name="facing" val="west"/>
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
